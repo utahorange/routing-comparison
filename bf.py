@@ -3,6 +3,8 @@
 
 # Class to represent a graph
 
+import time
+
 class Graph:
 
 	def __init__(self, vertices):
@@ -55,7 +57,9 @@ class Graph:
 
 
 # Driver's code
-if __name__ == '__main__':
+		
+
+def main():
 	g = Graph(5)
 	g.addEdge(0, 1, -1)
 	g.addEdge(0, 2, 4)
@@ -69,5 +73,11 @@ if __name__ == '__main__':
 	# function call
 	g.BellmanFord(0)
 
+if __name__ == '__main__':
+	start_time = time.time()
+	main()
+	print("--- %s seconds ---" % (time.time() - start_time))
+
+#
 # Initially, Contributed by Neelam Yadav
 # Later On, Edited by Himanshu Garg
